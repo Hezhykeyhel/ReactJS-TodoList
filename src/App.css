@@ -1,0 +1,223 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: cursive;
+    transition: .3s all ease-out;
+    overflow-x: hidden;
+}
+.container{
+    background: linear-gradient(to right bottom, rgb(18, 52, 59, 0.45), rgb(18, 52, 59, 0.95));
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app-wrapper{
+    background-color: rgb(18, 52, 59, 0.95);
+    background-image: url(./assets/favorite.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-blend-mode:overlay;
+    min-width: 450px;
+    min-height: 650px;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    box-shadow: 3px 2px 80px rgb(250, 250, 250);
+    margin-bottom: 30px;
+}
+.header{
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+    line-height: 40px;
+}
+.header h1{
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.header small{
+    font-size: 15px;
+}
+.text-input{
+    outline: none;
+    width: 260px;
+    padding: 15px;
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #000;
+    border: 2px solid #695a2a;
+    border-radius: 8px;
+}
+.text-input:focus,
+textarea:focus{
+    border: 2px solid #d85454;
+}
+.button-container{
+    width: 100%;
+    display: flex;
+    margin:10px;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+
+}
+.text-input-state{
+    outline: none;
+    width: 260px;
+    padding: 15px;
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #000;
+    border: 2px solid #9df0e9;
+    border-radius: 8px;
+}
+.button-add{
+    width: 70px;
+    padding: 15px 15px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 0;
+    background: rgba(168, 242, 255, 0.55);
+    cursor: pointer;
+}
+.button-add:hover{
+    /* transform: scale(0.9); */
+    transition: ease-in-out all .2s;
+}
+.list-item{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    margin: 20px 0;
+    overflow: hidden !important;
+    border: 2px dashed rgb(157, 240, 233, 0.4);
+    border-radius: 10px;
+    padding: 10px;
+    background: none;
+}
+.inputContainer{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+.list-item textarea{
+    background: none !important;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    overflow-x: hidden;
+    overflow-y:auto;
+    flex: 1;
+}
+.button-complete,
+.button-delete,
+.button-edit{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent !important;
+    font-size: 22px;
+}
+.button-complete:hover,
+.button-delete:hover,
+.button-edit:hover,
+.success{
+    transform: scale(1.10);
+}
+.button-complete{
+    color: #ff6c6c;
+    margin-right: 20px;
+}
+
+.button-edit{
+    color: #dad4a2;
+    margin-right: 20px;
+}
+.button-delete{
+    color: #b1cf98;
+    margin-right: 20px;
+}
+.complete{
+    text-decoration-style: solid;
+    text-decoration-line: line-through;
+    text-decoration-color: #b94848;
+    color: #bbb !important;
+}
+.success{
+    color: #9df0e9 !important;
+}
+.list{
+    width: 100%;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-right: 15px;
+}
+
+textarea:focus,
+button:focus{
+    outline: none;
+    border: none;
+}
+@media only screen and  (max-width: 485px) {
+    .button-complete,
+    .button-delete,
+    .button-edit{
+    transform: none;
+    }
+    .app-wrapper{
+        transform: scale(0.9);
+    }
+    .button-container{
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+        justify-content: right;
+        text-align: right;
+
+    }
+    .button-complete:hover,
+    .button-delete:hover,
+    .button-edit:hover,
+    .success{
+    transform: none !important;
+}
+}
+@media only screen and  (max-width: 450px) {
+    .app-wrapper{
+        transform:scale(0.88);
+    }
+    .success{
+        margin-left: 0 !important;
+    }
+}
+@media only screen and  (max-width: 420px) {
+    .app-wrapper{
+        transform:scale(0.85);
+    }
+}
+
+@media only screen and  (max-width: 400px) {
+    .app-wrapper{
+        transform:scale(0.85.6);
+    }
+}
